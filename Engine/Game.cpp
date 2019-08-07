@@ -40,6 +40,24 @@ void Game::UpdateModel()
 {
 }
 
+void Game::DrawCrosshair(int offset_x, int offset_y, Color color = Colors::White)
+{
+	gfx.PutPixel(offset_x + 5, offset_y, color);
+	gfx.PutPixel(offset_x + 4, offset_y, color);
+	gfx.PutPixel(offset_x + 3, offset_y, color);
+	gfx.PutPixel(offset_x - 3, offset_y, color);
+	gfx.PutPixel(offset_x - 4, offset_y, color);
+	gfx.PutPixel(offset_x - 5, offset_y, color);
+
+	gfx.PutPixel(offset_x, offset_y + 5, color);
+	gfx.PutPixel(offset_x, offset_y + 4, color);
+	gfx.PutPixel(offset_x, offset_y + 3, color);
+	gfx.PutPixel(offset_x, offset_y - 3, color);
+	gfx.PutPixel(offset_x, offset_y - 4, color);
+	gfx.PutPixel(offset_x, offset_y - 5, color);
+}
+
 void Game::ComposeFrame()
 {
+	DrawCrosshair(700, 500);
 }

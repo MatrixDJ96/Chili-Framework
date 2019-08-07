@@ -37,6 +37,7 @@ private:
 	/********************************/
 	/*  User Functions              */
 	/********************************/
+	void DrawCrosshair(int offset_x, int offset_y, Color color);
 private:
 	MainWindow& wnd;
 	Graphics gfx;
